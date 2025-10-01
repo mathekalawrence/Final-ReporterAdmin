@@ -17,10 +17,10 @@ const Dashboard = ({ currentUser }) => {
     // API call simulation
     setTimeout(() => {
       setStats({
-        totalRevenue: 245890,
-        activeBookings: 47,
-        availableSpots: 128,
-        activeAttendants: 23
+        totalRevenue: 215810,
+        activeBookings: 41,
+        availableSpots: 138,
+        activeAttendants: 33
       });
 
       setRevenueData([
@@ -28,9 +28,9 @@ const Dashboard = ({ currentUser }) => {
         { month: 'Feb', revenue: 190000 },
         { month: 'Mar', revenue: 150000 },
         { month: 'Apr', revenue: 180000 },
-        { month: 'May', revenue: 220000 },
+        { month: 'May', revenue: 144000 },
         { month: 'Jun', revenue: 245000 },
-        { month: 'Jul', revenue: 280000 }
+        { month: 'Jul', revenue: 301000 }
       ]);
 
       setRecentBookings([
@@ -126,7 +126,7 @@ const Dashboard = ({ currentUser }) => {
 
   const [hoveredCard, setHoveredCard] = useState(null);
 
-  // Simple bar chart component
+  // Bar chart component
   const RevenueChart = () => {
     const maxRevenue = Math.max(...revenueData.map(d => d.revenue));
     

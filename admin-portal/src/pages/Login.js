@@ -201,7 +201,7 @@ const Login = ({ onLogin, onSwitchToSignup }) => {
 
         <div style={styles.demoAccounts}>
           <strong>Demo Accounts:</strong>
-          <p>Email: lawrenceadminparknbo.com</p>
+          <p>Email: lawrenceadminparkbest@gmail.com</p>
           <p>Password: any password works well</p>
         </div>
 
