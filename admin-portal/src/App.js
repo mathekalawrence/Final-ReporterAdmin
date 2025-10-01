@@ -1,14 +1,24 @@
 
 //import React from 'react';
 
-
-import React, { useState } from 'react';
+import React, { useState, useEffect, setIsLoading } from 'react'; 
 
 function App() {
-  // State to track which page we're on
+  // State to track which page you are on
   const [currentPage, setCurrentPage] = useState('dashboard');
 
-  // Styles for our app
+  /*
+    // Simulating loading time
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000); // 1 second loading time
+    
+    return () => clearTimeout(timer);
+  }, []);
+  */
+
+  // Styles for the App
   const styles = {
     app: {
       display: 'flex',
@@ -70,8 +80,8 @@ function App() {
           <div>
             <h1>📊 Dashboard</h1>
             <div style={styles.card}>
-              <h3>Welcome to ParkNBO Admin!</h3>
-              <p>Total Revenue: <strong>Ksh 245,890</strong></p>
+              <h3>Welcome to ParkBest Admin!</h3>
+              <p>Total Revenue: <strong>Ksh 205,890</strong></p>
               <p>Active Bookings: <strong>47</strong></p>
               <p>Available Spots: <strong>128</strong></p>
             </div>
@@ -98,7 +108,7 @@ function App() {
             <div style={styles.card}>
               <h3>Manage Attendants</h3>
               <p>John Kamau - Active</p>
-              <p>Sarah Mwangi - Active</p>
+              <p>Sarah Mueni - Active</p>
               <p>Mike Ochieng - Pending</p>
             </div>
           </div>
@@ -114,7 +124,7 @@ function App() {
       {/* Sidebar Navigation */}
       <div style={styles.sidebar}>
         <div style={{marginBottom: '30px'}}>
-          <h2>🏢 ParkNBO Admin</h2>
+          <h2>🏢 ParkBest Admin</h2>
         </div>
         
         {/* Navigation Buttons */}

@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <div className="app">
       <div className="sidebar">
         <div className="logo">
-          <h2>🏢 ParkNBO Admin</h2>
+          <h2>🏢 ParkBest Admin</h2>
         </div>
         
         <nav className="nav">
