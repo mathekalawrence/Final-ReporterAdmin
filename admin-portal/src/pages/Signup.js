@@ -169,9 +169,9 @@ const Signup = ({ onSignup, onSwitchToLogin }) => {
   return (
     <div style={styles.container}>
       <div style={styles.card}>
-        <h1 style={styles.title}>🚀 Get Started</h1>
+        <h1 style={styles.title}>🚀 Get Started Now</h1>
         <p style={{textAlign: 'center', color: '#6b7280', marginBottom: '30px'}}>
-          Create your ParkNBO admin account
+          Create your ParkBest admin account
         </p>
         
         <form onSubmit={handleSubmit}>

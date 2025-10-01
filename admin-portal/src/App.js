@@ -11,7 +11,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState('login');
 
-  // Check if user is logged in on app start
+  // Checking if user is logged in on app start
   useEffect(() => {
     const savedUser = localStorage.getItem('adminUser');
     if (savedUser) {
@@ -21,21 +21,21 @@ function App() {
     setIsLoading(false);
   }, []);
 
-  // Handle login
+  // Handling login
   const handleLogin = (userData) => {
     setCurrentUser(userData);
     localStorage.setItem('adminUser', JSON.stringify(userData));
     setCurrentPage('dashboard');
   };
 
-  // Handle signup
+  // Handling signup
   const handleSignup = (userData) => {
     setCurrentUser(userData);
     localStorage.setItem('adminUser', JSON.stringify(userData));
     setCurrentPage('dashboard');
   };
 
-  // Handle logout
+  // Handling logout
   const handleLogout = () => {
     setCurrentUser(null);
     localStorage.removeItem('adminUser');
@@ -65,13 +65,13 @@ function App() {
           marginBottom: '20px'
         }}></div>
         <style>{`@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }`}</style>
-        <h2>🏢 ParkNBO Admin</h2>
+        <h2>🏢 ParkBest Admin</h2>
         <p>Loading...</p>
       </div>
     );
   }
 
-  // Render appropriate page based on authentication
+  // Rendering appropriate page based on authentication
   if (!currentUser) {
     if (currentPage === 'signup') {
       return <Signup onSignup={handleSignup} onSwitchToLogin={() => setCurrentPage('login')} />;

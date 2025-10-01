@@ -12,9 +12,9 @@ const Dashboard = ({ currentUser }) => {
   const [recentBookings, setRecentBookings] = useState([]);
   const [parkingHotspots, setParkingHotspots] = useState([]);
 
-  // Initialize data
+  // Initializing data
   useEffect(() => {
-    // Simulate API call
+    // API call simulation
     setTimeout(() => {
       setStats({
         totalRevenue: 245890,
@@ -34,10 +34,10 @@ const Dashboard = ({ currentUser }) => {
       ]);
 
       setRecentBookings([
-        { id: 1, customer: 'John Doe', spot: 'CBD Parking Complex', amount: 300, duration: '2 hours', status: 'active', time: '10:30 AM' },
-        { id: 2, customer: 'Jane Smith', spot: 'Westlands Secure Parking', amount: 480, duration: '3 hours', status: 'completed', time: '9:15 AM' },
-        { id: 3, customer: 'Mike Johnson', spot: 'Karen Shopping Center', amount: 200, duration: '1 hour', status: 'active', time: '11:45 AM' },
-        { id: 4, customer: 'Sarah Wilson', spot: 'CBD Parking Complex', amount: 600, duration: '4 hours', status: 'completed', time: '8:00 AM' }
+        { id: 1, customer: 'Muia Matheka', spot: 'CBD Parking Complex', amount: 300, duration: '2 hours', status: 'active', time: '10:30 AM' },
+        { id: 2, customer: 'Janet Oketch', spot: 'Westlands Secure Parking', amount: 480, duration: '3 hours', status: 'completed', time: '9:15 AM' },
+        { id: 3, customer: 'Michael Njuguna', spot: 'Karen Shopping Center', amount: 200, duration: '1 hour', status: 'active', time: '11:45 AM' },
+        { id: 4, customer: 'Sarah Moraa', spot: 'CBD Parking Complex', amount: 600, duration: '4 hours', status: 'completed', time: '8:00 AM' }
       ]);
 
       setParkingHotspots([
@@ -202,7 +202,7 @@ const Dashboard = ({ currentUser }) => {
           📊 Dashboard Overview
         </h1>
         <p style={{color: '#6b7280', fontSize: '16px'}}>
-          Welcome back, {currentUser.name}! Here's what's happening with your parking business today.
+          Welcome back, {currentUser.name}! Here's what's happening with your parking hub today.
         </p>
       </div>
 

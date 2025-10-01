@@ -78,8 +78,8 @@ const Layout = ({ currentUser, onLogout, currentPage, onPageChange, children }) 
       {/* Sidebar Navigation */}
       <div style={styles.sidebar}>
         <div style={{marginBottom: '30px'}}>
-          <h2 style={{margin: 0, color: '#3b82f6'}}>🏢 ParkNBO Admin</h2>
-          <small style={{color: '#9ca3af'}}>Parking Management System</small>
+          <h2 style={{margin: 0, color: '#3b82f6'}}>🏢 ParkBest Admin</h2>
+          <small style={{color: '#9ca3af'}}>ParkBest Parking Management System</small>
         </div>
 
         {/* User Info */}
@@ -87,7 +87,7 @@ const Layout = ({ currentUser, onLogout, currentPage, onPageChange, children }) 
           <div style={{fontWeight: '500'}}>{currentUser.name}</div>
           <small style={{color: '#9ca3af'}}>{currentUser.email}</small>
           <div style={{fontSize: '12px', color: '#10b981', marginTop: '5px'}}>
-            {currentUser.role} • {currentUser.company || 'ParkNBO'}
+            {currentUser.role} • {currentUser.company || 'ParkBest'}
           </div>
         </div>
         
@@ -146,7 +146,7 @@ const Layout = ({ currentUser, onLogout, currentPage, onPageChange, children }) 
           </div>
           <div style={{textAlign: 'right'}}>
             <div style={{fontWeight: '500', color: '#1f2937'}}>Hello, {currentUser.name}! 👋</div>
-            <small style={{color: '#6b7280'}}>Ready to manage your parking business</small>
+            <small style={{color: '#6b7280'}}>Management and efficiency at your parking</small>
           </div>
         </header>
         

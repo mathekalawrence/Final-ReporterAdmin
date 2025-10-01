@@ -152,7 +152,7 @@ const Login = ({ onLogin, onSwitchToSignup }) => {
   return (
     <div style={styles.container}>
       <div style={styles.card}>
-        <h1 style={styles.title}>🏢 ParkNBO Admin</h1>
+        <h1 style={styles.title}>🏢 ParkBest Admin</h1>
         
         <form onSubmit={handleSubmit}>
           <div style={styles.inputGroup}>
@@ -201,8 +201,8 @@ const Login = ({ onLogin, onSwitchToSignup }) => {
 
         <div style={styles.demoAccounts}>
           <strong>Demo Accounts:</strong>
-          <p>Email: admin@parknbo.com</p>
-          <p>Password: any password works</p>
+          <p>Email: lawrenceadminparknbo.com</p>
+          <p>Password: any password works well</p>
         </div>
 
         <div style={styles.switchText}>

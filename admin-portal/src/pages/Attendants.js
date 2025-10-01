@@ -4,12 +4,21 @@ const Attendants = () => {
   const [attendants] = useState([
     {
       id: 1,
-      name: 'John Kamau',
-      phone: '0712345678',
+      name: 'John Maina',
+      phone: '0700679901',
       location: 'CBD Parking',
       status: 'active',
-      earnings: 'Ksh 15,200'
-    }
+      earnings: 'Ksh 6,200'
+    },
+
+      {
+      id: 3,
+      name: 'Mary Nyaboke',
+      phone: '0111111592',
+      location: 'CBD Parking',
+      status: 'active',
+      earnings: 'Ksh 11,300'
+    },
   ]);
 
   return (
