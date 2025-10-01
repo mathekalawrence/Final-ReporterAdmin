@@ -1,47 +1,156 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
 
-const Layout = ({ children }) => {
-  const location = useLocation();
+const Layout = ({ currentUser, onLogout, currentPage, onPageChange, children }) => {
+  const styles = {
+    app: {
+      display: 'flex',
+      minHeight: '100vh',
+      fontFamily: 'Arial, sans-serif'
+    },
+    sidebar: {
+      width: '250px',
+      background: '#1f2937',
+      color: 'white',
+      padding: '20px',
+      display: 'flex',
+      flexDirection: 'column'
+    },
+    mainContent: {
+      flex: 1,
+      background: '#f3f4f6',
+      display: 'flex',
+      flexDirection: 'column'
+    },
+    header: {
+      background: 'white',
+      padding: '20px 30px',
+      borderBottom: '1px solid #e5e7eb',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center'
+    },
+    content: {
+      padding: '30px',
+      flex: 1
+    },
+    navButton: {
+      display: 'block',
+      width: '100%',
+      padding: '12px 15px',
+      marginBottom: '8px',
+      background: 'transparent',
+      border: 'none',
+      color: '#d1d5db',
+      textAlign: 'left',
+      borderRadius: '8px',
+      cursor: 'pointer',
+      fontSize: '14px',
+      transition: 'all 0.3s'
+    },
+    navButtonActive: {
+      background: '#3b82f6',
+      color: 'white'
+    },
+    logoutButton: {
+      display: 'block',
+      width: '100%',
+      padding: '12px 15px',
+      background: 'transparent',
+      border: 'none',
+      color: '#ef4444',
+      textAlign: 'left',
+      borderRadius: '8px',
+      cursor: 'pointer',
+      fontSize: '14px',
+      marginTop: 'auto',
+      transition: 'background 0.3s'
+    },
+    userInfo: {
+      background: '#374151',
+      padding: '15px',
+      borderRadius: '8px',
+      marginBottom: '20px'
+    }
+  };
 
   return (
-    <div className="app">
-      <div className="sidebar">
-        <div className="logo">
-          <h2>🏢 ParkBest Admin</h2>
+    <div style={styles.app}>
+      {/* Sidebar Navigation */}
+      <div style={styles.sidebar}>
+        <div style={{marginBottom: '30px'}}>
+          <h2 style={{margin: 0, color: '#3b82f6'}}>🏢 ParkNBO Admin</h2>
+          <small style={{color: '#9ca3af'}}>Parking Management System</small>
+        </div>
+
+        {/* User Info */}
+        <div style={styles.userInfo}>
+          <div style={{fontWeight: '500'}}>{currentUser.name}</div>
+          <small style={{color: '#9ca3af'}}>{currentUser.email}</small>
+          <div style={{fontSize: '12px', color: '#10b981', marginTop: '5px'}}>
+            {currentUser.role} • {currentUser.company || 'ParkNBO'}
+          </div>
         </div>
         
-        <nav className="nav">
-          <Link 
-            to="/" 
-            className={location.pathname === '/' ? 'nav-link active' : 'nav-link'}
-          >
-            📊 Dashboard
-          </Link>
-          <Link 
-            to="/parking-spots" 
-            className={location.pathname === '/parking-spots' ? 'nav-link active' : 'nav-link'}
-          >
-            🅿️ Parking Spots
-          </Link>
-          <Link 
-            to="/attendants" 
-            className={location.pathname === '/attendants' ? 'nav-link active' : 'nav-link'}
-          >
-            👥 Attendants
-          </Link>
-        </nav>
+        {/* Navigation */}
+        <button 
+          style={{
+            ...styles.navButton,
+            ...(currentPage === 'dashboard' ? styles.navButtonActive : {})
+          }}
+          onClick={() => onPageChange('dashboard')}
+        >
+          📊 Dashboard
+        </button>
+        
+        <button 
+          style={{
+            ...styles.navButton,
+            ...(currentPage === 'parking' ? styles.navButtonActive : {})
+          }}
+          onClick={() => onPageChange('parking')}
+        >
+          🅿️ Parking Spots
+        </button>
+        
+        <button 
+          style={{
+            ...styles.navButton,
+            ...(currentPage === 'attendants' ? styles.navButtonActive : {})
+          }}
+          onClick={() => onPageChange('attendants')}
+        >
+          👥 Attendants
+        </button>
+
+        {/* Logout Button */}
+        <button 
+          style={styles.logoutButton}
+          onClick={onLogout}
+        >
+          🚪 Logout
+        </button>
       </div>
 
-      <div className="main-content">
-        <header className="header">
-          <h1>Admin Portal</h1>
-          <div className="user-info">
-            <span>Welcome, Admin 👋</span>
+      {/* Main Content Area */}
+      <div style={styles.mainContent}>
+        <header style={styles.header}>
+          <div>
+            <h1 style={{margin: 0, color: '#1f2937'}}>
+              {currentPage === 'dashboard' && 'Dashboard Overview'}
+              {currentPage === 'parking' && 'Parking Spots Management'}
+              {currentPage === 'attendants' && 'Attendants Management'}
+            </h1>
+            <small style={{color: '#6b7280'}}>
+              Welcome back! Last login: {currentUser.lastLogin || 'Today'}
+            </small>
+          </div>
+          <div style={{textAlign: 'right'}}>
+            <div style={{fontWeight: '500', color: '#1f2937'}}>Hello, {currentUser.name}! 👋</div>
+            <small style={{color: '#6b7280'}}>Ready to manage your parking business</small>
           </div>
         </header>
         
-        <div className="content">
+        <div style={styles.content}>
           {children}
         </div>
       </div>
