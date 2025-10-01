@@ -119,7 +119,8 @@ const Signup = ({ onSignup, onSwitchToLogin }) => {
       display: 'block',
       marginBottom: '8px',
       color: '#374151',
-      fontWeight: '500'
+      //fontWeight: '500'
+      fontWeight: 'bold'
     },
     input: {
       width: '100%',
@@ -170,7 +171,7 @@ const Signup = ({ onSignup, onSwitchToLogin }) => {
     <div style={styles.container}>
       <div style={styles.card}>
         <h1 style={styles.title}>🚀 Get Started Now</h1>
-        <p style={{textAlign: 'center', color: '#6b7280', marginBottom: '30px'}}>
+        <p style={{textAlign: 'center', color: '#6b7280', marginBottom: '30px', fontWeight: 'bold'}}>
           Create your ParkBest admin account
         </p>
         

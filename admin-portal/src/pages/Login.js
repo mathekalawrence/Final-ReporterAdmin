@@ -95,7 +95,9 @@ const Login = ({ onLogin, onSwitchToSignup }) => {
       display: 'block',
       marginBottom: '8px',
       color: '#374151',
-      fontWeight: '500'
+      //fontWeight: '500'
+      fontWeight: 'bold'
+      
     },
     input: {
       width: '100%',
