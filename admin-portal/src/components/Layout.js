@@ -6,7 +6,6 @@ const Layout = ({ children }) => {
 
   return (
     <div className="app">
-      {/* Sidebar */}
       <div className="sidebar">
         <div className="logo">
           <h2>🏢 ParkNBO Admin</h2>
@@ -34,7 +33,6 @@ const Layout = ({ children }) => {
         </nav>
       </div>
 
-      {/* Main Content */}
       <div className="main-content">
         <header className="header">
           <h1>Admin Portal</h1>
