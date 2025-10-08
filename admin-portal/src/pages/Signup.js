@@ -30,7 +30,7 @@ const Signup = ({ onSignup, onSwitchToLogin }) => {
     const newErrors = {};
 
     if (!formData.fullName) {
-      newErrors.fullName = 'Full name is required';
+      newErrors.fullName = 'Enter your full name';
     }
 
     if (!formData.email) {
@@ -70,7 +70,7 @@ const Signup = ({ onSignup, onSwitchToLogin }) => {
 
     setIsLoading(true);
 
-    // Simulate API call
+    // Simulating the API call
     setTimeout(() => {
       const userData = {
         id: Date.now(),
@@ -103,7 +103,7 @@ const Signup = ({ onSignup, onSwitchToLogin }) => {
       borderRadius: '15px',
       boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2)',
       width: '100%',
-      maxWidth: '450px'
+      maxWidth: '450px',
     },
     title: {
       textAlign: 'center',
@@ -170,7 +170,7 @@ const Signup = ({ onSignup, onSwitchToLogin }) => {
   return (
     <div style={styles.container}>
       <div style={styles.card}>
-        <h1 style={styles.title}>🚀 Get Started Now</h1>
+        <h1 style={styles.title}>PARKBEST ADMIN REGISTRATION</h1>
         <p style={{textAlign: 'center', color: '#6b7280', marginBottom: '30px', fontWeight: 'bold'}}>
           Create your ParkBest admin account
         </p>
@@ -219,7 +219,7 @@ const Signup = ({ onSignup, onSwitchToLogin }) => {
                 ...styles.input,
                 ...(errors.phone ? styles.inputError : {})
               }}
-              placeholder="e.g., 0712345678"
+              placeholder="e.g., 0710689178"
             />
             {errors.phone && <div style={styles.errorText}>{errors.phone}</div>}
           </div>

@@ -4,7 +4,7 @@ const ParkingSpots = () => {
   const [spots, setSpots] = useState([
     {
       id: 1,
-      name: 'CBD Parking Complex',
+      name: 'CBD Parking HQ1',
       address: 'Moi Avenue, Nairobi CBD',
       rate: 60,
       capacity: 80,
@@ -16,7 +16,7 @@ const ParkingSpots = () => {
     },
     {
       id: 2,
-      name: 'Westlands Secure Parking',
+      name: 'Westlands SecureCourt Parking',
       address: 'Mpaka Road, Westlands',
       rate: 80,
       capacity: 40,
@@ -28,7 +28,7 @@ const ParkingSpots = () => {
     },
     {
       id: 3,
-      name: 'Karen Shopping Center',
+      name: 'Karen MainShopping Center',
       address: 'Karen, Langata Road',
       rate: 50,
       capacity: 50,
@@ -77,8 +77,9 @@ const ParkingSpots = () => {
       <div style={styles.header}>
         <div>
           <h1 style={{color: '#1f2937', marginBottom: '8px'}}>🅿️ Parking Spots Management</h1>
-          <p style={{color: '#6b7280'}}>Manage all your parking locations and availability</p>
+          <p style={{color: '#6b7280', fontStyle: 'italic'}}>Manage all your parking locations and availability</p>
         </div>
+    
         <button style={styles.btnPrimary} onClick={() => setShowAddModal(true)}>
           + Add New Spot
         </button>
@@ -98,6 +99,7 @@ const ParkingSpots = () => {
           <option value="available">Available</option>
           <option value="occupied">Occupied</option>
         </select>
+
         <div style={{flex: 1}}></div>
         <div style={{fontSize: '14px', color: '#6b7280'}}>
           Showing {filteredSpots.length} of {spots.length} spots

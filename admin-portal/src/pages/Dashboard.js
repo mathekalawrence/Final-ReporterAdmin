@@ -41,9 +41,9 @@ const Dashboard = ({ currentUser }) => {
       ]);
 
       setParkingHotspots([
-        { location: 'CBD Parking Complex', utilization: 85, available: 12, total: 80 },
+        { location: 'CBD Parking HQ', utilization: 85, available: 12, total: 80 },
         { location: 'Westlands Secure Parking', utilization: 92, available: 3, total: 40 },
-        { location: 'Karen Shopping Center', utilization: 65, available: 18, total: 50 },
+        { location: 'Karen MainShopping Center', utilization: 65, available: 18, total: 50 },
         { location: 'Thika Road Mall', utilization: 78, available: 25, total: 110 }
       ]);
     }, 500);
