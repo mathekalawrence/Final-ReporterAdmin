@@ -65,7 +65,7 @@ function App() {
           marginBottom: '20px'
         }}></div>
         <style>{`@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }`}</style>
-        <h2>🏢 ParkBest Admin</h2>
+        <h2>🅿️ ParkBest Admin</h2>
         <p>Loading...</p>
       </div>
     );

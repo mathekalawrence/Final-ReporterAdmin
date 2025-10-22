@@ -19,6 +19,18 @@ const Attendants = () => {
       status: 'active',
       earnings: 'Ksh 11,300'
     },
+
+    {
+      id: 5,
+      name: 'Mutisya Kariuki',
+      location: 'Thika Town',
+      Address: 'kariuki@gmail.com',
+      contact: '0714999911',
+      status: 'inactive',
+      earnings: 'N/A'
+    }
+
+
   ]);
 
   return (

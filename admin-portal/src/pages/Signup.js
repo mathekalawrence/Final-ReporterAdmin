@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+//import { supabase } from './lib/supabase';
+
 
 const Signup = ({ onSignup, onSwitchToLogin }) => {
   const [formData, setFormData] = useState({
@@ -85,7 +87,37 @@ const Signup = ({ onSignup, onSwitchToLogin }) => {
       onSignup(userData);
       setIsLoading(false);
     }, 2000);
+  };  
+
+
+ {/*
+ function Signup() {
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSignup = async (e) => {
+    e.preventDefault();
+    setMessage('');
+
+    // Step 1: Sign up the user using Supabase Auth
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: { full_name: name, phone_number: phone }, // store in user metadata
+      },
+    });
+
+    if (error) {
+      setMessage(error.message);
+    } else {
+      setMessage('Signup successful! Please check your email to verify your account.');
+    }
   };
+  */}
 
   const styles = {
     container: {
@@ -182,7 +214,7 @@ const Signup = ({ onSignup, onSwitchToLogin }) => {
               type="text"
               name="fullName"
               value={formData.fullName}
-              onChange={handleChange}
+             onChange={handleChange}
               style={{
                 ...styles.input,
                 ...(errors.fullName ? styles.inputError : {})
@@ -254,7 +286,7 @@ const Signup = ({ onSignup, onSwitchToLogin }) => {
               placeholder="Create a password"
             />
             {errors.password && <div style={styles.errorText}>{errors.password}</div>}
-          </div>
+          </div> 
 
           <div style={styles.inputGroup}>
             <label style={styles.label}>Confirm Password</label>

@@ -13,7 +13,7 @@ const Login = ({ onLogin, onSwitchToSignup }) => {
       ...formData,
       [e.target.name]: e.target.value
     });
-    // Clear errors when user types
+    // Clearing errors when user types
     if (errors[e.target.name]) {
       setErrors({
         ...errors,
@@ -48,7 +48,7 @@ const Login = ({ onLogin, onSwitchToSignup }) => {
 
     setIsLoading(true);
 
-    // Simulate API call
+    // Simulating API call
     setTimeout(() => {
       const userData = {
         id: 1,
