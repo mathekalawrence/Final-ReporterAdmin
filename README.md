@@ -7,7 +7,7 @@ A comprehensive smart parking solution that reduces urban traffic congestion and
 
 ## Sustainable Development Impact 
 
-**Primary SDG: - Sustainable Cities and Communities**
+**Primary Sustainable Development Goal: - Sustainable Cities and Communities**
 - **Target:** Providing access to sustainable transport systems
 - **Target:** Reduce environmental impacts in cities
 - **Target:** Integrate climate change measures into policies
