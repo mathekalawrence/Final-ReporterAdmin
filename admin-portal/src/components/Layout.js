@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 
 const Layout = ({ currentUser, onLogout, currentPage, onPageChange, children }) => {
   const styles = {
